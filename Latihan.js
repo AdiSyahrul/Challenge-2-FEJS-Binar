@@ -134,27 +134,27 @@ console.log(getSplitName(0));
 
 //START Soal 6
 console.log('\n=============SOAL 6=============')
-function getAngkaTerbesarKedua(arr){
+function getAngkaTerbesarKedua(dataNumbers){
     let pertama = -1 , kedua = -1;
-    if(typeof(arr)==='number' || typeof (arr)==='undefined'){
+    if(typeof(dataNumbers)==='number' || typeof (dataNumbers)==='undefined'){
         console.log('\nERROR');
         return false;
     }
     else{
-        for(let i = 0; i <= arr.length-1; i++){
-            if(arr[i] > pertama){
+        for(let i = 0; i <= dataNumbers.length-1; i++){
+            if(dataNumbers[i] > pertama){
                 kedua = pertama;
-                pertama = arr[i];
+                pertama = dataNumbers[i];
             }
-            else if( arr[i] > kedua && arr[i] != pertama){
-                kedua = arr[i];
+            else if( dataNumbers[i] > kedua && dataNumbers[i] != pertama){
+                kedua = dataNumbers[i];
             }
         }
-        console.log(kedua)
+        return(kedua);
     }
 }
-const arr=[9,4,7,7,4,3,2,2,8];
-console.log(getAngkaTerbesarKedua(arr));
+const dataNumbers=[9,4,7,7,4,3,2,2,8];
+console.log(getAngkaTerbesarKedua(dataNumbers));
 console.log(getAngkaTerbesarKedua(0));
 console.log(getAngkaTerbesarKedua());
 
